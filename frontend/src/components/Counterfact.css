@@ -1,0 +1,159 @@
+.counterfact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light background color for contrast */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em; /* Larger font size for heading */
+}
+
+.counterfact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+}
+
+.counterfact-card {
+    background-color: #ffffff; /* Card background color */
+    border: 1px solid #ddd; /* Light border for cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for hover effects */
+}
+
+.counterfact-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.card-title {
+    color: #007bff; /* Primary color for case ID */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.card-content h3 {
+    color: #555; /* Subtitle color */
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+.card-content p {
+    margin-bottom: 15px; /* Space below each paragraph */
+    color: #333; /* Text color */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em; /* Larger error message */
+}
+
+/* Specific styles for modified counter facts */
+.modified {
+    border-left: 5px solid #28a745; /* Green accent for modified */
+}
+
+.modified .card-title {
+    color: #28a745; /* Green for modified case ID */
+}
+
+.modified .card-content h3 {
+    color: #5a5a5a; /* Darker gray for subtitles */
+}
+
+/* Specific styles for unmodified counter facts */
+.unmodified {
+    border-left: 5px solid #dc3545; /* Red accent for unmodified */
+}
+
+.unmodified .card-title {
+    color: #dc3545; /* Red for unmodified case ID */
+}
+
+.unmodified .card-content h3 {
+    color: #7a7a7a; /* Lighter gray for subtitles */
+}
+
+.card-title {
+    margin-bottom: 10px; /* Space below title */
+}
+
+.card-content h3 {
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+.card-content p {
+    margin-bottom: 15px; /* Space below each paragraph */
+    color: #333; /* Text color */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em; /* Larger error message */
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    margin: 0 10px;
+    align-self: center;
+}
+
+.page-selection {
+    margin: 20px 0; /* Add margin around the selection */
+}
+
+#page-size-select {
+    padding: 5px; /* Add padding for a better look */
+    font-size: 1em; /* Adjust font size as needed */
+}
