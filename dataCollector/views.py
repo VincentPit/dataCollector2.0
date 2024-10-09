@@ -13,8 +13,7 @@ from rest_framework.pagination import PageNumberPagination
 class CustomPagination(PageNumberPagination):
     page_size = 100  # Number of records per page
     page_size_query_param = 'page_size'  # Allow dynamic page size
-    max_page_size = None  # No maximum page size
-
+    max_page_size = 500 
 # Helper function for paginated responses
 def get_paginated_response(request, queryset, serializer_class):
     paginator = CustomPagination()
