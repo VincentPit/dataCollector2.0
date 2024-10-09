@@ -9,6 +9,9 @@ from .views import (
     get_unmodified_counterfacts,
     get_modified_qa_zre,
     get_modified_counterfacts,
+    update_counterfact,
+    get_modification_history,
+    
 )
 
 urlpatterns = [
@@ -25,4 +28,7 @@ urlpatterns = [
     path('api/counterfacts/', get_paginated_counterfacts, name='get_paginated_counterfacts'),
     path('api/counterfacts/unmodified/', get_unmodified_counterfacts, name='get_unmodified_counterfacts'),
     path('api/counterfacts/modified/', get_modified_counterfacts, name='get_modified_counterfacts'),
+    path('api/counterfacts/<int:pk>/', update_counterfact, name='update_counterfact'),  # New URL for updating counterfacts
+    
+    path('api/counterfacts/<int:object_id>/history/', get_modification_history, name='get_modification_history'),
 ]

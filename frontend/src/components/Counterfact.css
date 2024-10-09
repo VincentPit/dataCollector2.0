@@ -157,3 +157,29 @@ h1 {
     padding: 5px; /* Add padding for a better look */
     font-size: 1em; /* Adjust font size as needed */
 }
+
+.history-container {
+    padding: 20px;
+}
+
+.history-list {
+    margin-top: 20px;
+}
+
+.history-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.loading-message, .error-message {
+    font-weight: bold;
+    color: #ff0000;
+}

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import QA_ZRE, Counterfact, ModifiedQA_ZRE, ModifiedCounterfact
+from .models import QA_ZRE, Counterfact, ModifiedQA_ZRE, ModifiedCounterfact, ModificationHistory
 
 class QA_ZRESerializer(serializers.ModelSerializer):
     class Meta:
@@ -26,3 +26,8 @@ class ModifiedCounterfactSerializer(serializers.ModelSerializer):
     class Meta:
         model = ModifiedCounterfact
         fields = ['original', 'case_id', 'pararel_idx', 'requested_rewrite', 'paraphrase_prompts', 'neighborhood_prompts', 'attribute_prompts', 'generation_prompts', 'is_modified']  # Include all relevant fields
+
+class ModificationHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ModificationHistory
+        fields = ['modified_object', 'object_id', 'modification_time', 'modified_by', 'previous_values', 'new_values']
