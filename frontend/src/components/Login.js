@@ -53,6 +53,10 @@ const Login = () => {
                 <button type="submit">Login</button>
             </form>
             {message && <p>{message}</p>} {/* Display message if exists */}
+            <p>
+                Don't have an account?{' '}
+                <button onClick={() => navigate('/register')}>Register here</button>
+            </p>
         </div>
     );
 };

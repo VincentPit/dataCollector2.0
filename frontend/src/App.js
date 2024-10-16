@@ -4,14 +4,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
-import QA_ZRE from './components/QA_ZRE';
-import ModifiedQA_ZRE from './components/ModifiedQA_ZRE';
-import UnmodifiedQA_ZRE from './components/UnmodifiedQA_ZRE';
-import Counterfact from './components/Counterfact';
-import UnmodifiedCounterfacts from './components/UnmodifiedCounterfact';  
-import ModifiedCounterfacts from './components/ModifiedCounterfact';  
-import ProtectedRoute from './components/ProtectedRoute';
+import UploadPage from './components/Upload';
+import Original from './components/Origininal';
+import DatasetItems from './components/DatasetItems';
+import EditItem from './components/EditItem';
+import Modified from './components/Modified';
 import { AuthProvider } from './AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
     return (
@@ -35,54 +34,52 @@ const App = () => {
                         }
                     />
                     <Route
-                        path="/qa_zre"
+                        path="/upload" 
                         element={
                             <ProtectedRoute>
-                                <QA_ZRE />
+                                <UploadPage />
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/unmodified-qa-zre" 
+                    <Route 
+                        path="/original" 
                         element={
                             <ProtectedRoute>
-                                <UnmodifiedQA_ZRE />
+                                <Original />
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/modified-qa-zre" 
+                    <Route 
+                        path="/datasets/:datasetId"
                         element={
                             <ProtectedRoute>
-                                <ModifiedQA_ZRE />
+                                <DatasetItems />
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/counterfact"
+
+                    <Route 
+                        path="/datasets/:datasetId/items/:itemId/edit"
                         element={
                             <ProtectedRoute>
-                                <Counterfact />
+                                <EditItem />
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/unmodified-counterfacts" 
+
+<Route 
+                        path="/modified"
                         element={
                             <ProtectedRoute>
-                                <UnmodifiedCounterfacts />
+                                <Modified />
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/modified-counterfacts" 
-                        element={
-                            <ProtectedRoute>
-                                <ModifiedCounterfacts />
-                            </ProtectedRoute>
-                        }
-                    />
+
+
+
                 </Routes>
+                
             </Router>
         </AuthProvider>
     );

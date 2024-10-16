@@ -7,24 +7,16 @@ const Home = () => {
             <h1>Welcome to the Home Page!</h1>
             <p>Please choose one of the options below:</p>
             <div style={buttonContainerStyle}>
-                <Link to="/qa_zre">
-                    <button style={buttonStyle}>QA_ZRE</button>
+                <Link to="/upload">
+                    <button style={buttonStyle}>Upload</button>
                 </Link>
-                <Link to="/unmodified-qa-zre">
-                    <button style={buttonStyle}>Unmodified QA_ZRE</button>
+                <Link to="/original">
+                    <button style={buttonStyle}>Original</button>
                 </Link>
-                <Link to="/modified-qa-zre">
-                    <button style={buttonStyle}>Modified QA_ZRE</button>
+                <Link to="/modified">
+                    <button style={buttonStyle}>Modified</button>
                 </Link>
-                <Link to="/counterfact">
-                    <button style={buttonStyle}>Counterfact</button>
-                </Link>
-                <Link to="/unmodified-counterfacts">
-                    <button style={buttonStyle}>Unmodified Counterfacts</button>
-                </Link>
-                <Link to="/modified-counterfacts">
-                    <button style={buttonStyle}>Modified Counterfacts</button>
-                </Link>
+
             </div>
         </div>
     );

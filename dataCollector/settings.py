@@ -52,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = "dataCollector.urls"
@@ -88,7 +89,7 @@ WSGI_APPLICATION = "dataCollector.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kedb',
+        'NAME': 'kedb2_0',
         'USER': 'root',          # Default user for XAMPP
         'PASSWORD': '741@741Ts',          # Default password is usually empty
         'HOST': '127.0.0.1',    # Or 'localhost'
@@ -143,6 +144,19 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
+#CORS_ALLOW_ALL_ORIGINS = True
+
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
@@ -151,3 +165,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
+DEBUG = True
